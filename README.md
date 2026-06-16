@@ -16,6 +16,41 @@ The system is trained using a dataset of labeled messages and applies Natural La
 
 ---
 
+System Workflow
+The spam detection system follows the Machine Learning pipeline shown below:
+1. Data Collection
+The labeled spam dataset is imported into the system.
+2. Data Preprocessing
+Text data is cleaned by:
+Removing punctuation
+Converting text to lowercase
+Removing stop words
+Eliminating unnecessary symbols
+3. Feature Extraction
+The cleaned text is transformed into numerical representations using:
+TF-IDF (Term Frequency-Inverse Document Frequency)
+This technique helps identify important words while reducing the influence of common words.
+4. Model Training
+The processed data is split into training and testing datasets.
+Machine Learning algorithms such as:
+Naive Bayes
+Logistic Regression
+Random Forest
+can be used for training.
+5. Model Evaluation
+The model performance is evaluated using:
+Accuracy
+Precision
+Recall
+F1-Score
+Confusion Matrix
+6. Prediction
+The trained model predicts whether an incoming message is:
+Spam
+Ham (Genuine Message)
+
+---
+
 ## 🛠️ Technologies Used
 - Python
 - Machine Learning
