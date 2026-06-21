@@ -1,111 +1,128 @@
-Markdown
-# Spam Message Detection using Artificial Intelligence and Machine Learning
+Spam Message Detection Using Artificial Intelligence
 
-## 📌 Project Overview
-Spam messages are one of the major problems in digital communication platforms such as SMS, emails, and social media applications. This project uses Artificial Intelligence and Machine Learning techniques to automatically classify messages as **Spam** or **Ham (Genuine Messages)**.
+Problem Statement
 
-The system is trained using a dataset of labeled messages and applies Natural Language Processing (NLP) techniques for text preprocessing and classification.
+Many users receive unwanted spam messages daily through SMS and social media. These spam messages may contain advertisements, fake offers, or harmful links. Identifying spam manually is difficult and time-consuming. This project uses Artificial Intelligence and Machine Learning to automatically detect whether a message is spam or genuine.
 
----
+Impact of the Problem
 
-## 🎯 Objectives
-- Detect spam messages automatically
-- Reduce unwanted and fraudulent messages
-- Improve communication security
-- Apply Machine Learning algorithms for text classification
+- Helps users avoid unwanted and harmful messages.
+- Improves message security.
+- Saves time by automatically filtering spam messages.
+- Uses AI techniques for smart message classification.
 
----
+Key Outcomes
 
-System Workflow
-The spam detection system follows the Machine Learning pipeline shown below:
-1. Data Collection
-The labeled spam dataset is imported into the system.
-2. Data Preprocessing
-Text data is cleaned by:
-Removing punctuation
-Converting text to lowercase
-Removing stop words
-Eliminating unnecessary symbols
-3. Feature Extraction
-The cleaned text is transformed into numerical representations using:
-TF-IDF (Term Frequency-Inverse Document Frequency)
-This technique helps identify important words while reducing the influence of common words.
-4. Model Training
-The processed data is split into training and testing datasets.
-Machine Learning algorithms such as:
-Naive Bayes
-Logistic Regression
-Random Forest
-can be used for training.
-5. Model Evaluation
-The model performance is evaluated using:
-Accuracy
-Precision
-Recall
-F1-Score
-Confusion Matrix
-6. Prediction
-The trained model predicts whether an incoming message is:
-Spam
-Ham (Genuine Message)
+- Detects spam and genuine messages automatically.
+- Improves user security from fake or unwanted messages.
+- Saves time by filtering spam messages quickly.
+- Uses Artificial Intelligence for message classification.
+- Enhances digital communication safety.
 
----
+Technologies Used
 
-## 🛠️ Technologies Used
 - Python
-- Machine Learning
-- Natural Language Processing (NLP)
-- Scikit-learn
 - Pandas
 - NumPy
+- Scikit-learn
+- Natural Language Processing (NLP)
+- Machine Learning
+- Streamlit
 
----
+Project Structure
 
-## 📂 Project Structure
-```bash
 spam-message-detection-ai/
-│── dataset/
+
+├── dataset/
 │   └── spam.csv
-│
-│── spam_detection.py
-│── requirements.txt
-│── README.md
-│── .gitignore
-⚙️ Features
-Message preprocessing and cleaning
-Spam and genuine message classification
-Machine Learning model training
-Accurate prediction system
-Easy-to-use implementation
-🧠 Machine Learning Workflow
-Data Collection
-Data Preprocessing
-Feature Extraction
-Model Training
-Prediction and Classification
-▶️ How to Run the Project
-Step 1: Clone the Repository
-Bash
-git clone https://github.com/yourusername/spam-message-detection-ai.git
-Step 2: Open Project Folder
-Bash
-cd spam-message-detection-ai
-Step 3: Install Required Libraries
-Bash
+
+├── notebooks/
+│   └── spam_detection.ipynb
+
+├── src/
+│   ├── preprocess.py
+│   ├── train_model.py
+│   └── predict.py
+
+├── requirements.txt
+├── README.md
+└── app.py
+
+Machine Learning Workflow
+
+Dataset
+↓
+Preprocessing
+↓
+CountVectorizer
+↓
+Train-Test Split
+↓
+Naive Bayes Model
+↓
+Prediction
+↓
+Spam / Ham Output
+
+Requirements
+
+Add the following to "requirements.txt":
+
+pandas
+numpy
+scikit-learn
+nltk
+streamlit
+
+Install libraries using:
+
 pip install -r requirements.txt
-Step 4: Run the Project
-Bash
-python spam_detection.py
-📊 Expected Output
-The system predicts whether a message is:
+
+Dataset
+
+SMS Spam Collection Dataset from Kaggle.
+
+Model Description
+
+1. Load the dataset.
+2. Clean and prepare the data.
+3. Convert text into numerical vectors using CountVectorizer.
+4. Split data into training and testing sets.
+5. Train a Multinomial Naive Bayes model.
+6. Predict whether messages are Spam or Ham.
+7. Evaluate model accuracy.
+
+Expected Output
+
+Input:
+
+Congratulations! You won a free prize.
+
+Output:
+
 Spam
-Ham (Genuine Message)
-Example:
-Bash
-Input: "Congratulations! You won a free prize."
-Output: Spam
-📈 Future Enhancements
-Web application integration
-Real-time spam detection
-Deep Learning implementation
-Mobile application support
+
+Input:
+
+Hello, how are you today?
+
+Output:
+
+Ham
+
+Future Enhancements
+
+- Real-time spam detection
+- Deep Learning models
+- Email spam detection
+- Mobile application integration
+- Web-based dashboard using Streamlit
+
+GitHub Upload Commands
+
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin YOUR_GITHUB_REPO_LINK
+git push -u origin main
